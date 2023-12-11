@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs"></script>
+</head>
+<body>
+    <input type="file" id="imageInput" accept="image/*">
+    <button onclick="generateCaption()">Generate Caption</button>
+    <br>
+    <img id="imageElement" style="max-width: 100%; height: auto;">
+    <p id="captionOutput" style="font-weight: bold;"></p>
+
+    <script src="main.js"></script>
+</body>
+</html>
