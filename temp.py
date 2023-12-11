@@ -19,6 +19,8 @@ import threading
 import time
 import torchvision
 from PIL import Image as PIL_Image
+from sound import speak
+
 global frame
 frame = None
 
@@ -145,6 +147,7 @@ def main():
                                 enc_x_num_pads=[0],
                                 mode='beam_search', **beam_search_kwargs)
             pred = tokens2description(pred[0][0], coco_tokens['idx2word_list'], sos_idx, eos_idx)
+            speak(pred)
             print('Description: ' + pred + '\n')
         i+=1
         time.sleep(0.1)
